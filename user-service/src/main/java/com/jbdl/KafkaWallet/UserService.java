@@ -12,7 +12,7 @@ public class UserService {
 
     private static final String USER_CREATE_TOPIC = "user_create";
     private final UserRepository userRepository;
-    private final KafkaTemplate kafkaTemplate;
+    private final KafkaTemplate<String, String> kafkaTemplate;
 
     public User createUser(User user) {
        user = userRepository.save(user);
